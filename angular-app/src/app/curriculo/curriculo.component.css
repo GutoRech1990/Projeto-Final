@@ -1,6 +1,6 @@
 
 
-h2{
+header h2{
     color: blue;
 }
 
@@ -22,9 +22,10 @@ header{
 nav{
     padding: 15px;
     flex-basis: 100%;
-    /* position: fixed; */
-    /* top: 0; */
+    /* position: fixed; 
+    top: 0;  */
 }
+
 
 img{
     width: 10%;
@@ -35,6 +36,7 @@ img{
     text-align: center;
     background-color: rgba(0, 0, 255, 0.76);
     color: white;
+    padding-bottom: 35px;
 }
 
 .welcome p{
@@ -45,4 +47,24 @@ img{
 .welcome h3{
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+#cv{
+    padding: 5px 35px;
+}
+
+#cv li{
+    padding: 15px 3px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1px 0;
+}
+
+footer p{
+    padding: 15px 0;
 }
