@@ -1,0 +1,48 @@
+
+
+h2{
+    color: blue;
+}
+
+.bigdiv{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 0;
+    border: solid;
+}
+
+header{
+    text-align: center;
+    border-bottom: solid;
+    display: flex;
+    flex-flow: row wrap;
+    /* padding-top: 25px; */
+}
+
+nav{
+    padding: 15px;
+    flex-basis: 100%;
+    /* position: fixed; */
+    /* top: 0; */
+}
+
+img{
+    width: 10%;
+    flex-basis: 50%;
+}
+
+.welcome{
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.76);
+    color: white;
+}
+
+.welcome p{
+    text-align: justify;
+    padding: 2px 35px;
+}
+
+.welcome h3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
