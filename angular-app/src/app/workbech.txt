@@ -1,0 +1,12 @@
+create database projetoapex;
+
+use projetoapex;
+
+create table notebook (
+id int,
+nameNote varchar(50) not null,
+note varchar(500) not null,
+dataNote date not null
+);
+
+select * from notebook;
