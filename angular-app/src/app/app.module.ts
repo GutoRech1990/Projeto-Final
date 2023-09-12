@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurriculoComponent } from './curriculo/curriculo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    CurriculoComponent
+    CurriculoComponent,
   ],
   imports: [
     BrowserModule,
