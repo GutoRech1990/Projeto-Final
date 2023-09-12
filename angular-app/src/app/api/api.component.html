@@ -1,0 +1,41 @@
+<style>
+    th{
+        text-align: center;
+    }
+
+    td{
+        text-align: justify;
+    }
+</style>
+<hr>
+<h1 style="text-align: center;">Welcome to Notes</h1> <br>
+<form>
+    <input type="text" placeholder="Titulo" name="title" [(ngModel)]="objetoPostagem.titulo"/>
+    <input type="text" placeholder="Texto" name="body" [(ngModel)]="objetoPostagem.conteudo"/>
+    <button type="button" class="btn btn-success" *ngIf="!objetoPostagem.id" (click)="cadastrarPostagem()">Cadastrar</button>
+    <button type="button" class="btn btn-success" *ngIf="objetoPostagem.id" (click)="salvarPostagem()">Alterar</button>
+</form>
+<hr>
+
+
+<hr>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr> 
+            <th>Id</th>
+            <th>Título</th>
+            <th>Conteudo</th>
+            <th>Alterar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let p of posts">
+            <td>{{p.id}}</td>
+            <td>{{p.titulo}}</td>
+            <td>{{p.conteudo}}</td>
+            <td><button (click)="editarPostagem(p.id)">Alterar</button></td>
+            <td><button (click)="removerPostagem(p.id)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
