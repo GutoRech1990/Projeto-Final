@@ -1,9 +1,4 @@
 
-
-header h2{
-    /* color: blue; */
-}
-
 .bigdiv{
     max-width: 1200px;
     margin: 0 auto;
@@ -22,8 +17,8 @@ header{
 nav{
     padding: 15px;
     flex-basis: 100%;
-    /* position: fixed; 
-    top: 0;  */
+    position: sticky; 
+    top: 0; 
 }
 
 
@@ -50,7 +45,7 @@ img{
 }
 
 #cv{
-    padding: 5px 35px;
+    padding: 80px 35px;
 }
 
 #cv li{
