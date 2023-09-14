@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 //Rotas de ação
 // -- para adicionar publicacoes 
-app.get("/", async(req, res)=>{
+app.get("/main", async(req, res)=>{
     Post.findAll().then(function(posts){
         res.send({posts:posts})
     }).catch(function(erro){
