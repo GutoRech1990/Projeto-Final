@@ -37,8 +37,9 @@ export class ApiComponent implements OnInit {
 
   selecionarPostagens(){
     this.servico.listar()
-      .subscribe(postagens => {this.posts = postagens})
-      console.log(this.posts)
+      .subscribe(postagens => {this.posts = postagens;
+      })
+      
   }
 
   cadastrarPostagem(){
@@ -47,6 +48,7 @@ export class ApiComponent implements OnInit {
         this.posts?.push(postagem)
       })
   }
+
 
   editarPostagem(id: any){
     let postagem = new Postagem

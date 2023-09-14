@@ -8,6 +8,7 @@ import { CurriculoComponent } from './curriculo/curriculo.component';
 import { ApiComponent } from './api/api.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { ApiComponent } from './api/api.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

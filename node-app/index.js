@@ -38,7 +38,7 @@ app.put("/posts/:id", function(req, res) {
         conteudo: req.body.conteudo},
         {where:{"id": req.params.id}
     }).then(function() {
-        res.send("ok")
+        res.send({status: "ok"})
     }).catch(function(erro) {
         res.send("Falha ao atualizar registro! Erro: " + erro);
     });
