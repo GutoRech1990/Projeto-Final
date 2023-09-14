@@ -8,11 +8,12 @@ import { Postagem } from './postagem';
 })
 export class ApiService {
   //url
-  private url: string = "https://localhost:8081/"
+  private url: string = "/posts"
 
   constructor(private http: HttpClient) { }
   //listar postagem
   listar(): Observable<Postagem[]>{
+    console.log("")
     return this.http.get<Postagem[]>(this.url)
   }
 

@@ -5,22 +5,23 @@ const Post = require("./post");
 const bodyParser = require('body-parser')
 const cors = require("cors");
 
-app.use(cors());
+
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cors());
 app.use(bodyParser.json());
 
 
 //Rotas de ação
 // -- para adicionar publicacoes 
-app.get("/main", async(req, res)=>{
+app.get("/posts", async(req, res)=>{
     Post.findAll().then(function(posts){
-        res.send({posts:posts})
+        res.send(posts)
     }).catch(function(erro){
         res.send("Erro: " + erro)
     })
 })
 
-app.post("/add", function(req,res){
+app.post("/posts", function(req,res){
     Post.create({
         titulo: req.body.titulo,
         conteudo: req.body.conteudo  
@@ -31,7 +32,7 @@ app.post("/add", function(req,res){
     })
 })
 
-app.post("/edit/:id", function(req, res) {
+app.put("/posts/:id", function(req, res) {
     Post.update({
         titulo: req.body.titulo,
         conteudo: req.body.conteudo},
@@ -44,7 +45,7 @@ app.post("/edit/:id", function(req, res) {
 });
 
 // -- para deletar publicacoes 
-app.get("/deletar/:id", function(req,res){
+app.delete("/posts/:id", function(req,res){
     Post.destroy({
         where:{"id": req.params.id}
     }).then(function(){

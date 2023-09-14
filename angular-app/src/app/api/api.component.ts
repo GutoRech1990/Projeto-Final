@@ -38,6 +38,7 @@ export class ApiComponent implements OnInit {
   selecionarPostagens(){
     this.servico.listar()
       .subscribe(postagens => {this.posts = postagens})
+      console.log(this.posts)
   }
 
   cadastrarPostagem(){
