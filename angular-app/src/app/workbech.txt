@@ -2,11 +2,11 @@ create database projetoapex;
 
 use projetoapex;
 
-create table notebook (
+create table notebooks (
 id int,
 nameNote varchar(50) not null,
 note varchar(500) not null,
 dataNote date not null
 );
 
-select * from notebook;
+select * from notebooks;
